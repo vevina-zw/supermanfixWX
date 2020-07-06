@@ -1,0 +1,118 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wx6324a8a586492840",
+	"projectname": "supermanfixWX",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/order/orderLists/orderLists",
+					"pathName": "pages/order/orderLists/orderLists",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/orderDetail/orderDetail",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/maintain/beforeOpen/beforeOpen",
+					"pathName": "pages/maintain/beforeOpen/beforeOpen",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/maintain/completed/completed",
+					"pathName": "pages/maintain/completed/completed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/maintain/payCode/payCode",
+					"pathName": "pages/maintain/payCode/payCode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/maintain/tagging/tagging",
+					"pathName": "pages/maintain/tagging/tagging",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/search/search",
+					"pathName": "pages/order/search/search",
+					"scene": null
+				}
+			]
+		}
+	}
+}

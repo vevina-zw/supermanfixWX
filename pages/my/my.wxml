@@ -1,0 +1,18 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="my_data">
+    <view class="data_list">
+      <view class="title">本月维修单量</view>
+      <view class="data"><text>{{myData.monthMaintainCount}}</text>单</view>
+    </view>
+    <view class="data_list">
+      <view class="title">本月业绩</view>
+      <view class="data"><text>{{myData.monthAmount}}</text>元</view>
+    </view>
+    <view class="data_list">
+      <view class="title">本月业绩排名</view>
+      <view class="data"><text>{{myData.myMonthRank}}</text>/{{myData.allMonthRank}}</view>
+    </view>
+  </view>
+  <button class="btn_white logout" bindtap="logoutAction">退出登录</button>
+</view>

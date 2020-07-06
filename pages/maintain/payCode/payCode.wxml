@@ -1,0 +1,4 @@
+<!--pages/maintain/payCode/payCode.wxml-->
+<view class="container">
+  <button class="btn_green finish_btn" bindtap="goTagging">订单完成</button>
+</view>

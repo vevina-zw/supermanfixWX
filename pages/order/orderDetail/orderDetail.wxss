@@ -1,0 +1,108 @@
+/* pages/order/orderDetail/orderDetail.wxss */
+.detail_warn{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 20rpx 35rpx;
+  border-top: 1rpx solid #e0e0e0;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.detail_warn text{
+  font-size: 26rpx;
+}
+.detail_info_box{
+  width: 750rpx;
+  box-sizing: border-box;
+  margin: 20rpx 0;
+  padding: 20rpx 35rpx;
+  border-top: 1rpx solid #e0e0e0;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.detail_info_box .title{
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 50rpx;
+}
+.detail_info_box .info{
+  padding-bottom:20rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.detail_info_box .info >view{
+  display: flex;
+  align-items: center;
+  padding: 5rpx 0;
+}
+.detail_info_box .info >view text:nth-child(1){
+  width: 150rpx;
+}
+.detail_info_box .info >view text:nth-child(2){
+  flex: 1;
+}
+button{
+  color: #e7534c;
+}
+button.handle_btn{
+  width: 300rpx;
+}
+.member_info_box{
+  width: 750rpx;
+  border-top: 1rpx solid #e0e0e0;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.show_memberInfo{
+  width: 750rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #AEA6A6;
+  font-weight: 600;
+}
+.show_memberInfo text{
+  margin-left: 10rpx;
+}
+.member_info{
+
+}
+.member_info .title{
+  font-size: 30rpx;
+  font-weight: 600;
+  padding: 10rpx 35rpx;
+  background-color: #F7F3F3;
+  border-top: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.member_info .info_con{
+  padding: 20rpx 35rpx;
+}
+.member_info .basic_info >view{
+  padding: 5rpx 0;
+}
+.member_info .tags_info >view{
+  display: inline-block;
+  margin: 0 20rpx 20rpx 0;
+  padding:10rpx 15rpx;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 5rpx;
+}
+.member_info .purchase_info .table{
+  border-top: 1rpx solid #f0f0f0;
+  border-left: 1rpx solid #f0f0f0;
+  display: table;
+}
+.purchase_info .table .thead{
+  display: table-header-group;
+}
+.purchase_info .table .tbody{
+  display: table-row-group;
+}
+.purchase_info .table .tr{
+  display: table-row;
+}
+.purchase_info .table .th,.purchase_info .table .td{
+  display: table-cell;
+  padding: 5rpx;
+  border-right: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid #f0f0f0;
+  font-size: 24rpx;
+}

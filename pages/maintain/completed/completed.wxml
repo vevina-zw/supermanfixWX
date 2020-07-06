@@ -1,0 +1,73 @@
+<!--pages/maintain/completed/completed.wxml-->
+<view class="container">
+  <view class="photo_box">
+    <view bindtap="chooseImages" data-tag="photoPath1">
+      <block wx:if="{{photoPath1.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传修好的\n带串号手机正面照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath1}}" catchtap="previewImage" data-tag="photoPath1" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath1" ></text>
+      </view>
+    </view>
+    <view bindtap="chooseImages" data-tag="photoPath2">
+      <block wx:if="{{photoPath2.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传\n手机背面照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath2}}" catchtap="previewImage" data-tag="photoPath2" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath2" ></text>
+      </view>
+    </view>
+    <view bindtap="chooseImages" data-tag="photoPath3">
+      <block wx:if="{{photoPath3.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传\n手机左上角照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath3}}" catchtap="previewImage" data-tag="photoPath3" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath3" ></text>
+      </view>
+    </view>
+    <view bindtap="chooseImages" data-tag="photoPath4">
+      <block wx:if="{{photoPath4.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传\n手机右上角照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath4}}" catchtap="previewImage" data-tag="photoPath4" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath4" ></text>
+      </view>
+    </view>
+    <view bindtap="chooseImages" data-tag="photoPath5">
+      <block wx:if="{{photoPath5.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传\n手机左下角照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath5}}" catchtap="previewImage" data-tag="photoPath5" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath5" ></text>
+      </view>
+    </view>
+    <view bindtap="chooseImages" data-tag="photoPath6">
+      <block wx:if="{{photoPath6.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传\n手机右下角照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath6}}" catchtap="previewImage" data-tag="photoPath6" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath6" ></text>
+      </view>
+    </view>
+  </view>
+  <!-- <button class="btn_green" bindtap="completedWork">维修完成交付客人验机</button> -->
+  <textarea class="refuse_reason" placeholder="如订单取消/拒绝，请填写原因；如订单实际维修信息（故障、价格、颜色）和下单不符，请填写准确信息" bindinput="getRefuse"></textarea>
+  <div class="remark_btn_box">
+    <button class="btn_orange" bindtap="refuseOrder">订单取消/拒绝</button>
+    <!-- <button class="btn_brown" bindtap="remarkOrder">订单备注</button> -->
+    <button class="btn_green" bindtap="completedWork">维修完成交付客人验机</button>
+  </div>
+</view>
+

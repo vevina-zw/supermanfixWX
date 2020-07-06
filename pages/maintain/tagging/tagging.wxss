@@ -1,0 +1,42 @@
+/* pages/maintain/tagging/tagging.wxss */
+.tag_box{
+  width: 680rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30rpx 0;
+}
+.tag_box text{
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  padding: 15rpx 30rpx;
+  margin: 0 20rpx 20rpx;
+}
+.tag_box text.is_checked{
+  background-color: #259b24;
+}
+.add_tag{
+  width: 680rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}
+.add_tag input{
+  width: 400rpx;
+  height: 70rpx;
+  padding:0 25rpx;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add_tag text{
+  color: #B1AEB4;
+  font-size: 50rpx;
+  margin-left: 20rpx;
+}
+button.save_btn{
+  width: 500rpx;
+  margin-top:50rpx;
+}

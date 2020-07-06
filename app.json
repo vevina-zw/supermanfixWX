@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/order/orderLists/orderLists",
+    "pages/order/orderDetail/orderDetail",
+    "pages/order/search/search",
+    "pages/maintain/beforeOpen/beforeOpen",
+    "pages/maintain/completed/completed",
+    "pages/maintain/tagging/tagging",
+    "pages/maintain/payCode/payCode",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "工程师端",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a5a5a5",
+    "selectedColor": "#e7534c",
+    "list": [
+      {
+        "pagePath": "pages/order/orderLists/orderLists",
+        "iconPath": "images/tabBar/tabBar_order_d.png",
+        "selectedIconPath": "images/tabBar/tabBar_order_l.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tabBar/tabBar_my_d.png",
+        "selectedIconPath": "images/tabBar/tabBar_my_l.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

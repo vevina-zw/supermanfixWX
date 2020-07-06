@@ -1,0 +1,26 @@
+/* pages/my/my.wxss */
+page,.container{
+  height: 100%;
+}
+.my_data{
+  width: 750rpx;
+}
+.data_list{
+  width: 750rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  padding: 20rpx 35rpx;
+  border-top: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.data_list .data text{
+  font-size: 34rpx;
+  color: #e7534c;
+}
+button.logout{
+  width:300rpx;
+  margin-bottom:100rpx;
+}

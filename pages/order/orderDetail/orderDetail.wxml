@@ -1,0 +1,115 @@
+<!--pages/order/orderDetail/orderDetail.wxml-->
+<view class="container">
+  <view class="detail_warn">创建时间<text>(客服给工程师派单时间)</text>：{{orderDetail.designateTime}}</view>
+  <view class="detail_info_box">
+    <view class="title">订单详情</view>
+    <view class="info">
+      <view>
+        <text>订单编号</text><text>{{orderDetail.orderId}}</text>
+      </view>
+      <view>
+        <text>订单类型</text>
+        <text wx:if="orderDetail.orderType=='1'">维修订单</text>
+        <text wx:elif="orderDetail.orderType=='2'">内存升级</text>
+        <text wx:elif="orderDetail.orderType=='3'">保险订单</text>
+      </view>
+      <view>
+        <text>订单状态</text><text>{{orderDetail.status}}</text>
+      </view>
+      <view>
+        <text>姓名</text><text>{{orderDetail.userName}}</text>
+      </view>
+      <view>
+        <text>手机号</text><text>{{orderDetail.contactPhone}}</text>
+        <button bindtap="tel">点击拨打</button>
+      </view>
+      <view>
+        <text>手机型号</text><text>{{orderDetail.brandModelName}}</text>
+      </view>
+      <view>
+        <text>颜色</text><text>{{orderDetail.color}}</text>
+      </view>
+      <view>
+        <text>故障</text><text>{{orderDetail.malfunctionName}}</text>
+      </view>
+      <view>
+        <text>报价</text><text>{{orderDetail.price}}</text>
+      </view>
+      <view>
+        <text>维修方式</text><text>{{orderDetail.maintainType}}</text>
+      </view>
+      <view>
+        <text>维修地址</text><text>{{orderDetail.address}}</text>
+        <button bindtap="copyText" data-text="{{orderDetail.address}}">点击复制</button>
+      </view>
+      <view>
+        <text>预约时间</text><text>{{orderDetail.appointmentTime}}</text>
+      </view>
+      <view>
+        <text>寄回单号</text><text>{{orderDetail.sendBackNo}}</text>
+      </view>
+      <view wx:if="{{orderDetail.memo}}">
+        <text>备注信息</text><text>{{orderDetail.memo}}</text>
+      </view>
+    </view>
+    <button class="btn_green handle_btn" bindtap="startReceive" wx:if="{{orderStatusCode == 3}}">收到订单</button>
+    <button class="btn_green handle_btn" bindtap="startMaintain" wx:if="{{orderStatusCode == 4}}">开始检测维修</button>
+    <button class="btn_green handle_btn" bindtap="continueMaintain" wx:if="{{orderStatusCode == 5}}">继续维修</button>
+    <button class="btn_gray handle_btn" wx:if="{{orderStatusCode < 0}}">订单已取消</button>
+    <button class="btn_gray handle_btn" wx:if="{{orderStatusCode == 7 && payStatus == 3 }}">订单已完成</button>
+    <button class="btn_green handle_btn" bindtap="goPayCode" wx:if="{{orderStatusCode == 7 && payStatus != 3 }}">显示支付码</button>
+  </view>
+  <view class="member_info_box">
+    <view class="show_memberInfo" bindtap="showMemberInfo">会员信息详情，点击查看
+      <text class="fa fa-chevron-down" wx-if="{{!show_memberInfo}}"></text>
+      <text class="fa fa-chevron-up" wx-if="{{show_memberInfo}}"></text>
+    </view>
+    <view class="member_info" wx-if="{{show_memberInfo}}">
+      <view class="title">基本信息</view>
+      <view class="info_con basic_info">
+        <view>名字：{{orderDetail.userName}}</view>
+        <view>电话：{{customerInfo.userName}}</view>
+        <view>会员等级：{{customerInfo.levelName}}</view>
+        <view>常用地址：{{customerInfo.address}}</view>
+        <view>手机信息：{{customerInfo.mobileInfo}}</view>
+        <view>生日：{{customerInfo.birthday}}</view>
+        <view>累计消费金融：{{customerInfo.allAmount}}元</view>
+        <view>成长值：{{customerInfo.experience}}</view>
+        <view>性别：
+          <block wx:if="{{customerInfo.sex==1}}">男</block>
+          <block wx:if="{{customerInfo.sex==2}}">女</block>
+        </view>
+        <view>年龄：{{customerInfo.age}}</view>
+        <view>注册时间：{{customerInfo.registTime}}</view>
+        <view>最后登录时间：{{customerInfo.lastLoginTime}}</view>
+      </view>
+      <view class="title" wx:if="{{customerTags.length >0}}">个人标签</view>
+      <view class="info_con tags_info" wx:if="{{customerTags.length >0}}">
+        <view wx:for="{{customerTags}}" wx:key="index">{{item}}</view>
+      </view>
+      <view class="title">购买信息</view>
+      <view class="info_con purchase_info">
+        <view class="table">
+          <view class="thead">
+            <view class="tr">
+              <view class="th">维修日期</view>
+              <view class="th">维修型号</view>
+              <view class="th">故障</view>
+              <view class="th">维修地点</view>
+              <view class="th">维修工程师</view>
+            </view>
+          </view>
+          <view class="tbody">
+            <view class="tr" wx:for="{{orderLists}}" wx:key="index" >
+              <view class="td">{{item.orderTime}}</view>
+              <view class="td">{{item.brandModelName}}</view>
+              <view class="td">{{item.malfunctionName}}</view>
+              <view class="td">{{item.address}}</view>
+              <view class="td">{{item.engineerName}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/order/orderLists/orderLists.wxml-->
+<view class="container">
+  <view class="order_search">
+    <view class="search_box">
+      <text class="fa fa-search"></text>
+      <input placeholder="通过订单编号、用户名字、电话、地址进行搜索" disabled="disabled" bindtap="toSearch"></input>
+    </view>
+  </view>
+  <view class="order_warn">进行中的订单(<text>{{processingCount}}</text>)，好服务好口碑成就你成就我！</view>
+  <view class="order_box">
+    <view class="order_list"
+     wx:for="{{orderLists}}" wx:key="index" 
+     data-order="{{item.orderId}}" data-customer="{{item.customerId}}" 
+     data-status="{{item.orderStatusCode}}" data-screen="{{item.hasScreenMalfunction}}"
+     bindtap="toDetail">
+      <view class="order_status">
+        <text>订单编号：{{item.orderId}}</text>
+        <text class="cancle" wx:if="{{item.orderStatusCode < 0}}">{{item.status}}</text>
+        <text class="unfinished" wx:elif="{{item.orderStatusCode >= 0 && item.orderStatusCode < 7}}">{{item.status}}</text>
+        <text class="unfinished" wx:elif="{{item.orderStatusCode == 7 && item.payStatus != 3}}">未支付</text>
+        <text class="finished" wx:elif="{{item.orderStatusCode == 7 && item.payStatus == 3}}">完成</text>
+        <!-- 
+        <text class="unfinished">新订单接入</text>
+        <text class="unfinished">已确认待维修</text>
+        <text class="cancle">已取消</text>
+        <text class="finished">订单完成</text>
+        -->
+      </view>
+      <view class="order_info">
+        <view><text>{{item.brandModelName}}</text><text>{{item.color}}</text><text>{{item.malfunctionName}}</text></view>
+        <view><text>{{item.maintainWay}}</text></view>
+      </view>
+    </view>
+  </view>
+</view>

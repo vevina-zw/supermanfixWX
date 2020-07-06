@@ -1,0 +1,15 @@
+<!--pages/maintain/tagging/tagging.wxml-->
+<view class="container">
+  <view class="tag_box">
+    <!-- <text class="is_checked">男性</text> -->
+    <text wx:for="{{tagLists}}" wx:key="index" 
+    class="{{item.checked?'is_checked':''}}"
+    bindtap="checkTag" data-index="{{index}}"
+    >{{item.tagName}}</text>
+  </view>
+  <view class="add_tag">
+    <input placeholder="自定义标签" bindinput="defineTag"></input>
+    <text class="fa fa-plus-square-o" bindtap="addDefineTag"></text>
+  </view>
+  <button class="btn_green save_btn" bindtap="saveTag">保存</button>
+</view>

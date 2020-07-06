@@ -1,0 +1,29 @@
+/* pages/maintain/completed/completed.wxss */
+@import "/pages/maintain/beforeOpen/beforeOpen.wxss";
+.photo_box{
+  width: 750rpx;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.photo_box >view{
+  width: 299rpx;
+  height: 224rpx;
+  margin: 0 20rpx 20rpx 20rpx;
+}
+.remark_btn_box{
+  width: 680rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+.remark_btn_box .btn_orange{
+  width: 240rpx;
+  float: left;
+}
+.remark_btn_box .btn_green{
+  width: 360rpx;
+  float: right;
+}

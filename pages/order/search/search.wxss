@@ -1,0 +1,12 @@
+/* pages/order/search/search.wxss */
+@import "/pages/order/orderLists/orderLists.wxss";
+.order_search{
+  padding: 20rpx 0 30rpx;
+}
+.order_search button{
+  width: 120rpx;
+  margin-left: 20rpx;
+}
+.search_box{
+  flex: 1;
+}

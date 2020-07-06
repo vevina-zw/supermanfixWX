@@ -1,0 +1,49 @@
+/**app.wxss**/
+page{
+  font-size: 28rpx;
+  color: #424242;
+}
+.container {
+  width: 750rpx;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+} 
+button{
+  font-size: 28rpx;
+  background-color: #fff;
+}
+button::after {
+  border: none
+}
+button.btn_white{
+  border: 1rpx solid #e0e0e0;
+  color: #424242;
+}
+button.btn_green{
+  color: #fff;
+  background-color:#259b24;
+}
+button.btn_orange{
+  color: #fff;
+  background-color:#FF9800;
+}
+button.btn_red{
+  color: #fff;
+  background-color:#e7534c;
+}
+button.btn_gray{
+  color: #fff;
+  background-color:#d0d0d0;
+}
+button.btn_brown{
+  color: #fff;
+  background-color:#71493a;
+}
+
+@import "utils/fontawesome.wxss"
+

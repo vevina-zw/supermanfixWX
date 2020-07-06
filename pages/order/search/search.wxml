@@ -1,0 +1,33 @@
+<!--pages/order/search/search.wxml-->
+<view class="container">
+  <view class="order_search">
+    <view class="search_box">
+      <text class="fa fa-search"></text>
+      <input placeholder="输入订单编号/用户电话" bindinput ="searchInput"></input>
+    </view>
+    <button class="btn_red" bindtap="searchAction">搜索</button>
+  </view>
+  <view class="order_box" wx:if="{{!noSearchData}}">
+    <view class="order_list"
+     wx:for="{{orderLists}}" wx:key="index" 
+     data-id="{{item.orderId}}" data-status="{{item.orderStatusCode}}" bindtap="toDetail">
+      <view class="order_status">
+        <text>订单编号：{{item.orderId}}</text>
+        <text class="cancle" wx:if="{{item.orderStatusCode < 0}}">{{item.status}}</text>
+        <text class="unfinished" wx:elif="{{item.orderStatusCode >= 0 && item.orderStatusCode < 7}}">{{item.status}}</text>
+        <text class="finished" wx:elif="{{item.orderStatusCode == 7}}">{{item.status}}</text>
+        <!-- 
+        <text class="unfinished">新订单接入</text>
+        <text class="unfinished">已确认待维修</text>
+        <text class="cancle">已取消</text>
+        <text class="finished">订单完成</text>
+        -->
+      </view>
+      <view class="order_info">
+        <view><text>{{item.brandModelName}}</text><text>{{item.color}}</text><text>{{item.malfunctionName}}</text></view>
+        <view><text>{{item.maintainWay}}</text></view>
+      </view>
+    </view>
+  </view>
+  <view  wx:else>未查询到结果</view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/maintain/beforeOpen/beforeOpen.wxml-->
+<view class="container">
+  <view class="photo_box">
+    <view bindtap="chooseImages" data-tag="photoPath1">
+      <block wx:if="{{photoPath1.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传带串号手机正面照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath1}}" catchtap="previewImage"data-tag="photoPath1" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath1" ></text>
+      </view>
+    </view>
+    <view bindtap="chooseImages" data-tag="photoPath2">
+      <block wx:if="{{photoPath2.length<=0}}">
+        <text class="fa fa-camera"></text>
+        <text>请拍摄上传新料和特修手机照片</text>
+      </block>
+      <view class="imgBox" wx:else>
+        <image src="{{photoPath2}}" catchtap="previewImage"data-tag="photoPath2" ></image>
+        <text class="fa fa-trash-o" catchtap="deleteImg" data-tag="photoPath2" ></text>
+      </view>
+    </view>
+  </view>
+  <button class="btn_green" bindtap="startOpen">开始拆机</button>
+  <textarea class="refuse_reason" placeholder="取消/拒绝原因描述：" bindinput="getRefuse"></textarea>
+  <button class="btn_orange" bindtap="refuseOrder">订单取消/拒绝</button>
+</view>

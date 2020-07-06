@@ -1,0 +1,68 @@
+/* pages/order/orderLists/orderLists.wxss */
+.order_search{
+  width: 680rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.search_box{
+  flex: 1;
+  height: 70rpx;
+  padding:0 25rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search_box text{
+  color: #B1AEB4;
+  margin-right: 10rpx;
+}
+.search_box input{
+  flex:1;
+  line-height: 60rpx;
+}
+.order_warn{
+  width: 750rpx;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  margin: 30rpx 0;
+  font-size: 30rpx;
+}
+.order_warn text{
+  color: #e7534c;
+}
+.order_box{}
+.order_list{
+  width: 750rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  padding: 0 35rpx;
+  border-top: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.order_status{
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order_status .unfinished{/* 新订单接入、已确认待维修 */
+  color: #e7534c;
+}
+.order_status .cancle{/* 已取消 */
+  color: #a5a5a5;
+}
+.order_status .finished{/* 订单完成 */
+  color: #008000;
+}
+.order_info{
+  padding: 15rpx 0;
+  line-height: 40rpx;
+}
+.order_info text{
+  padding-right: 20rpx;
+}
